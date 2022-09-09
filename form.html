@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form Demo</title>
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/form.css">
+</head>
+<body>
+<header class="section header">
+    <div class="container">
+        <h1>Header content</h1>
+    </div>
+</header>
+<nav class="section navigation">
+    <div class="container">
+        <h2>Nav content</h2>
+    </div>
+</nav>
+<section class="section main">
+    <div class="container">
+        <div class="sidebar">
+            <h2>Side bar</h2>
+        </div>
+        <div class="content">
+            <form method="get" action="#">
+                <label>Full name</label>
+                <input type="text" required name="fullname" placeholder="Enter name..."/>
+                <label>Email</label>
+                <input type="email" required name="youremail" placeholder="Enter email..."/>
+                <label>Password</label>
+                <input type="password" required name="pwd" placeholder="Enter password..."/>
+                <label>Age</label>
+                <input type="number" name="age" placeholder="Enter age..."/>
+                <label>Birthday</label>
+                <input type="date" name="brth" placeholder="Enter birthday..."/>
+                <label>Week</label>
+                <input type="week" name="brth" placeholder="Enter birthday..."/>
+
+                <label>Gender</label>
+                <label><input type="radio" value="male" name="gender" />Nam</label>
+                <label><input type="radio" value="female" name="gender" />Nữ</label>
+                <label><input type="radio" value="other" name="gender" />Khác</label>
+
+                <label>My CV</label>
+                <input type="file" name="cv" placeholder="Nộp CV.."/>
+
+                <label><input type="checkbox" name="confirm" />
+                    Tôi đã đọc và đồng ý các điều khoản trong hợp đồng</label>
+                <label>City</label>
+                <select name="yourcity">
+                    <option value="hanoi">Hà Nội</option>
+                    <option value="saigon">TP HCM</option>
+                    <option value="cantho">Cần Thơ</option>
+                </select>
+                <label>Tiểu sử bản thân</label>
+                <textarea name="motabanthan" rows="10" cols="100"></textarea>
+                <button type="submit">Submit</button>
+                <button type="reset">Reset</button>
+                <button type="button">Button</button>
+            </form>
+
+        </div>
+    </div>
+</section>
+<footer class="section footer">
+    <div class="container">
+        <h2>Footer content</h2>
+    </div>
+</footer>
+</body>
+</html>
