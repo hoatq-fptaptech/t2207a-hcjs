@@ -8,17 +8,17 @@
     <h1 id="city">Thành phố</h1>
     <h2><span id="nhietdo">20</span><sup>o</sup>C</h2>
     <h3>Áp suất: <span id="apsuat">1001</span></h3>
-    <button type="button" onclick="hanoi()">Hanoi</button>
-    <button type="button" onclick="hanoi()">TP HCM</button>
-    <button type="button" onclick="hanoi()">Tokyo</button>
-    <button type="button" onclick="hanoi()">Bangkok</button>
-    <button type="button" onclick="hanoi()">London</button>
-    <button type="button" onclick="hanoi()">Beijing</button>
-    <button type="button" onclick="hanoi()">Alaska</button>
-    <button type="button" onclick="hanoi()">New York</button>
-    <button type="button" onclick="hanoi()">Berlin</button>
+    <button type="button" onclick="hanoi('Hanoi')">Hanoi</button>
+    <button type="button" onclick="hanoi('saigon')">TP HCM</button>
+    <button type="button" onclick="hanoi('tokyo')">Tokyo</button>
+    <button type="button" onclick="hanoi('bangkok')">Bangkok</button>
+    <button type="button" onclick="hanoi('london')">London</button>
+    <button type="button" onclick="hanoi('beijing')">Beijing</button>
+    <button type="button" onclick="hanoi('alaska')">Alaska</button>
+    <button type="button" onclick="hanoi('new york')">New York</button>
+    <button type="button" onclick="hanoi('berlin')">Berlin</button>
     <script type="text/javascript">
-        function hanoi() {
+        function hanoi(city) {
             // code o day luon
             var xhttp = new XMLHttpRequest();
             xhttp.onload = function () {
@@ -36,7 +36,7 @@
                 var asuat = document.getElementById("apsuat");
                 asuat.innerText = pres;
             };
-            var url = "https://api.openweathermap.org/data/2.5/weather?q=hanoi&appid=09a71427c59d38d6a34f89b47d75975c&units=metric";
+            var url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=09a71427c59d38d6a34f89b47d75975c&units=metric`;
             xhttp.open("GET",url,true);
             xhttp.send();
         }
